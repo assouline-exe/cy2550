@@ -22,14 +22,15 @@ args = parser.parse_args()
 wordCount = args.words
 capitalizationCount = args.caps
 numberCount = args.numbers
-symbolCount = args.symbols
-capitalsList = []
+symbolCount = args.symbols 
+try:
+    capitalsList = random.sample(range(1, wordCount + 1), capitalizationCount)
+except:
+    capitalsList = list(range(1, wordCount + 1))
+
 symbolsList = ["~", "!", "@", "#", "$", "%", "^", "&", "*", ".", ":", ";"]
 passwordList = []
 
-
-for _ in range(capitalizationCount):
-    capitalsList.append(random.randint(1, wordCount))
 
 while wordCount > 0:
     if wordCount in capitalsList:
