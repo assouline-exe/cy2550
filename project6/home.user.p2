@@ -1,0 +1,17 @@
+#include <tunables/global>        
+/home/sassouline/p2 flags=(audit) {
+  #include <abstractions/base>
+  /home/sassouline/p2 mr,
+  /home/sassouline/.project2/config rw,
+  /home/sassouline/template r,
+  /tmp/project2* rw,
+  /var/log/syslog r,
+  /etc/fstab r,
+  /etc/crontab r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /etc/passwd r,
+  /etc/hosts r,
+  network inet stream, 
+  /proc/version r,
+  /proc/buddyinfo r,
+}
